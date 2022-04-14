@@ -235,19 +235,17 @@ class MainMenuState extends MusicBeatState
 
 								switch (daChoice)
 								{
-									case 'story_mode':
+								case 'story_mode':
 										MusicBeatState.switchState(new StoryMenuState());
-									case 'freeplay':
+								case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
-									#if MODS_ALLOWED
-									case 'mods':
+								#if MODS_ALLOWED
+								case 'mods':
 										MusicBeatState.switchState(new ModsMenuState());
 									#end
-									case 'awards':
-										MusicBeatState.switchState(new AchievementsMenuState());
-									case 'credits':
+								case 'credits':
 										MusicBeatState.switchState(new CreditsState());
-									case 'options':
+								case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
 								}
 							});
